@@ -1,0 +1,12 @@
+.box {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid black;
+}
+
+#canvas {
+    width: 600px;
+    padding: 200px 20px;
+    text-align: center;
+    border: 1px solid #333;
+}

@@ -12,6 +12,10 @@ var app = new Vue({
         inputAge: "",
         a: 0,
         b: 0,
+        available: false,
+        nearby: false,
+        error: false,
+        success: false
     },
     methods: {
         greetings: function (time) {
@@ -46,5 +50,11 @@ var app = new Vue({
             console.log("addToB");
             return this.age + this.b;
         },
+        compClass: function () {
+            return {
+                available: this.available,
+                nearby: this.nearby,
+            }
+        }
     },
 });

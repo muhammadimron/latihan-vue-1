@@ -15,7 +15,15 @@ var app = new Vue({
         available: false,
         nearby: false,
         error: false,
-        success: false
+        success: false,
+        characters: ["Char1", "Char2", "Char3", "Char4"],
+        ninjas: [
+            {name: "Ichi", age: 25},
+            {name: "Ni", age: 24},
+            {name: "San", age: 23},
+        ],
+        health: 100,
+        ended: false,
     },
     methods: {
         greetings: function (time) {
@@ -39,6 +47,16 @@ var app = new Vue({
         },
         logAge: function () {
             console.log("You have alt+enter your age");
+        },
+        punch: function () {
+            this.health -= 10;
+            if (this.health <= 0) {
+                this.ended = true;
+            }
+        },
+        restart: function () {
+            this.health = 100;
+            this.ended = false;
         },
     },
     computed: {
